@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class='navbar-brand' href="{% url 'index' %}">Brand</a>
+    <ul class='navbar-nav mr-auto'>
+      <li class='nav-item'><a class='nav-link' href="{% url 'admin:index' %}">Admin</a></li>
+      <li class='nav-item'><a class='nav-link' href="{% url 'basic_app:other' %}">Other</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    {% block body_block %}
+      <!-- Anything inside for inheritence -->
+    {% endblock %}
+  </div>
+</body>
+</html>
